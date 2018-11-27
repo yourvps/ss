@@ -344,14 +344,13 @@ install(){
 
     clear
     echo
-    echo -e "哈哈, 安装成功啦!赶紧将下面信息记下来用用吧"
-    echo -e "你的IP        : \033[41;37m $(get_ip) \033[0m"
-    echo -e "你的远程端口Port      : \033[41;37m ${shadowsocksport} \033[0m"
-    echo -e "你的本地端口Port      : \033[41;37m 1088 \033[0m"
-    echo -e "你的密码         : \033[41;37m ${shadowsockspwd} \033[0m"
-    echo -e "你的加密方法: \033[41;37m ${shadowsockscipher} \033[0m"
-    echo -e "你的协议: \033[41;37m origin \033[0m"
-    echo
+    echo -e "哈哈, 安装成功啦!配置已保存在：搭建完成配置.txt"
+    echo -e "你的IP: $(get_ip)"
+    echo -e "你的远程端口Port: ${shadowsocksport}"
+    echo -e "你的本地端口Port: 1088 "
+    echo -e "你的密码: ${shadowsockspwd}"
+    echo -e "你的加密方法: ${shadowsockscipher} "
+    echo -e "你的协议: origin"
     echo "享受它吧!"
     echo
 }
