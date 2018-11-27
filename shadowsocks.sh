@@ -5,6 +5,7 @@ export PATH
 clear
 echo
 echo "#############################################################"
+echo "#################        开始安装        #####################"
 echo "#############################################################"
 echo
 
@@ -190,8 +191,9 @@ pre_install(){
         hint="${ciphers[$i-1]}"
         echo -e "${green}${i}${plain}) ${hint}"
     done
-    read -p "你默认协议(Default: ${ciphers[0]}):" pick
-    [ -z "$pick" ] && pick=1
+    pick=7
+    # read -p "你默认协议(Default: ${ciphers[0]}):" pick
+    # [ -z "$pick" ] && pick=1
     expr ${pick} + 1 &>/dev/null
     if [ $? -ne 0 ]; then
         echo -e "[${red}Error${plain}] Please enter a number"
