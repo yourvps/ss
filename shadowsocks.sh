@@ -213,7 +213,8 @@ pre_install(){
     done
 
     echo
-    echo "-------------------开始，安装过程较慢，请耐心等待---------------------"
+    echo "-------------------开始，正在安装，安装过程较慢，请耐心等待---------------------"
+    echo "-------------------文件夹下有‘搭建完成配置.txt’生成即为成功搭建---------------------"
     # char=`get_char`
     # Install necessary dependencies
     if check_sys packageManager yum; then
