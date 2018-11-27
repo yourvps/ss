@@ -5,7 +5,7 @@ export PATH
 clear
 echo
 echo "#############################################################"
-echo "#################        开始安装        #####################"
+echo "#################       开始安装      #####################"
 echo "#############################################################"
 echo
 
@@ -153,9 +153,9 @@ pre_install(){
     fi
     # Set shadowsocks config password
     echo "请输入密码："
-    # read -p "(默认密码: haha.com):" shadowsockspwd
-    shadowsockspwd='yourvpshaha'
-    # [ -z "${shadowsockspwd}" ] && shadowsockspwd="haha.com"
+    read -p "(默认密码: haha.com):" shadowsockspwd
+    # shadowsockspwd='yourvpshaha'
+    [ -z "${shadowsockspwd}" ] && shadowsockspwd="haha.com"
     echo
     echo "---------------------------"
     echo "password = ${shadowsockspwd}"
