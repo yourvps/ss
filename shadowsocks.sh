@@ -206,7 +206,7 @@ pre_install(){
     shadowsockscipher=${ciphers[$pick-1]}
     echo
     echo "---------------------------"
-    echo "cipher = ${shadowsockscipher}"
+    echo "加密方法 = ${shadowsockscipher}"
     echo "---------------------------"
     echo
     break
@@ -344,13 +344,15 @@ install(){
 
     clear
     echo
-    echo -e "Congratulations, Shadowsocks-python server install completed!"
-    echo -e "Your Server IP        : \033[41;37m $(get_ip) \033[0m"
-    echo -e "Your Server Port      : \033[41;37m ${shadowsocksport} \033[0m"
-    echo -e "Your Password         : \033[41;37m ${shadowsockspwd} \033[0m"
-    echo -e "Your Encryption Method: \033[41;37m ${shadowsockscipher} \033[0m"
+    echo -e "哈哈, 安装成功啦!赶紧将下面信息记下来用用吧"
+    echo -e "你的IP        : \033[41;37m $(get_ip) \033[0m"
+    echo -e "你的远程端口Port      : \033[41;37m ${shadowsocksport} \033[0m"
+    echo -e "你的本地端口Port      : \033[41;37m 1088 \033[0m"
+    echo -e "你的密码         : \033[41;37m ${shadowsockspwd} \033[0m"
+    echo -e "你的加密方法: \033[41;37m ${shadowsockscipher} \033[0m"
+    echo -e "你的协议: \033[41;37m origin \033[0m"
     echo
-    echo "Enjoy it!"
+    echo "享受它吧!"
     echo
 }
 
