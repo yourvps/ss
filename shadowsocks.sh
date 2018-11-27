@@ -165,8 +165,9 @@ pre_install(){
     do
     dport=$(shuf -i 9000-19999 -n 1)
     echo "请输入端口 [1-65535]"
-    read -p "(默认端口: ${dport}):" shadowsocksport
-    [ -z "$shadowsocksport" ] && shadowsocksport=${dport}
+    # read -p "(默认端口: ${dport}):" shadowsocksport
+    shadowsocksport=10086
+    # [ -z "$shadowsocksport" ] && shadowsocksport=${dport}
     expr ${shadowsocksport} + 1 &>/dev/null
     if [ $? -eq 0 ]; then
         if [ ${shadowsocksport} -ge 1 ] && [ ${shadowsocksport} -le 65535 ] && [ ${shadowsocksport:0:1} != 0 ]; then
