@@ -235,12 +235,12 @@ download_files(){
     fi
     # Download Shadowsocks init script
     if check_sys packageManager yum; then
-        if ! wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks -O /etc/init.d/shadowsocks; then
+        if ! wget --no-check-certificate https://raw.githubusercontent.com/yourvps/ss/master/shadowsocks -O /etc/init.d/shadowsocks; then
             echo -e "[${red}Error${plain}] Failed to download shadowsocks chkconfig file!"
             exit 1
         fi
     elif check_sys packageManager apt; then
-        if ! wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-debian -O /etc/init.d/shadowsocks; then
+        if ! wget --no-check-certificate https://raw.githubusercontent.com/yourvps/ss/master/shadowsocks-debian -O /etc/init.d/shadowsocks; then
             echo -e "[${red}Error${plain}] Failed to download shadowsocks chkconfig file!"
             exit 1
         fi
@@ -333,7 +333,7 @@ install(){
         /etc/init.d/shadowsocks start
     else
         echo
-        echo -e "[${red}Error${plain}] Shadowsocks install failed! please visit https://teddysun.com/342.html and contact."
+        echo -e "[${red}Error${plain}] 安装失败!请查看 https://teddysun.com/342.html ."
         install_cleanup
         exit 1
     fi
@@ -346,7 +346,6 @@ install(){
     echo -e "Your Password         : \033[41;37m ${shadowsockspwd} \033[0m"
     echo -e "Your Encryption Method: \033[41;37m ${shadowsockscipher} \033[0m"
     echo
-    echo "Welcome to visit:https://teddysun.com/342.html"
     echo "Enjoy it!"
     echo
 }
