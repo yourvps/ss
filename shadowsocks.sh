@@ -213,7 +213,7 @@ pre_install(){
     done
 
     echo
-    echo "-------------------开始---------------------"
+    echo "-------------------开始，安装过程较慢，请耐心等待---------------------"
     # char=`get_char`
     # Install necessary dependencies
     if check_sys packageManager yum; then
