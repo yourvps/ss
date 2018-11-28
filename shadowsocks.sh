@@ -351,10 +351,11 @@ install(){
     echo -e "哈哈, 安装成功啦!配置已保存在：搭建完成配置.txt"
     echo -e "你的IP: $(get_ip)"
     echo -e "【你的远程端口Port: ${shadowsocksport}】"
-    echo -e "你的本地端口Port: 1088 "
+    echo -e "你的本地端口Port: 1080 "
     echo -e "你的密码: ${shadowsockspwd}"
     echo -e "你的加密方法: ${shadowsockscipher} "
     echo -e "你的协议: origin"
+    echo -e "你的混淆方式: plain"
     echo "享受它吧!"
     echo
 }
